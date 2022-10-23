@@ -10,7 +10,7 @@ const fetchBreedDescription = function(breedName, callback) {
       if (data.length < 1) { // Check if there is any data. No data = Cat not found.
         callback(null, 'Breed not found. Please check spelling and try again.'); // Makes the description of the callback a string informing the user the breed can not be found.
       } else { // Otherwise if data is found print out the description.
-        description = data[0].description; // store the description into a variable for ease of reading.
+        let description = data[0].description; // store the description into a variable for ease of reading.
         callback(null, description); // feed the description into the callback and give it a null error.
       }
     }
